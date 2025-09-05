@@ -1,0 +1,79 @@
+<html>
+  <body>
+<!-- directives:[] -->
+            <div id="content"><h5 id="goals">Goals</h5>
+<p>The task is to implement a login form following the given Figma design &amp; back-end API URL.</p>
+<p>Once logged in, the user will have access to a dashboard  where he can log-out.</p>
+<h6 id="normal-scenario">Normal Scenario</h6>
+<ol>
+<li>The <strong>user</strong> opens the URL of the app at <code>http://localhost:3000</code></li>
+<li>The <strong>system</strong> checks if authentication is saved &amp; not expired by going to <em>step 8</em> of this scenario</li>
+<li>The <strong>system</strong> displays the following form:<ol>
+<li><em>Data</em>:<ol>
+<li><code>E-Mail</code>: string</li>
+<li><code>Password</code>: string</li></ol></li>
+<li><em>Actions</em>:<ol>
+<li><code>Login</code> button</li></ol></li>
+<li>Business Rules:<ol>
+<li>The <code>Login</code> button will be disabled if email or password is not provided</li>
+<li>The <code>Login</code> button will be disabled if email is not a valid email (<code>xxx@yyy.zzz</code>)</li></ol></li></ol></li>
+<li>The <strong>user</strong> inputs the following credentials and clicks on <code>Login</code> button:<ol>
+<li><em>Data</em>:<ol>
+<li><strong>E-Mail</strong>: <code>dev.aert@gmail.com</code></li>
+<li><strong>Password</strong>: <code>helloworld</code></li></ol></li></ol></li>
+<li>The <strong>system</strong> calls the following <strong>login API</strong> to check that user credentials are valid (using previously entered values in <code>&lt;E-Mail&gt;</code> and <code>&lt;Password&gt;</code>):<ol>
+<li><strong>URL</strong>: <code>https://api-yeshtery.dev.meetusvr.com/v1/yeshtery/token</code></li>
+<li><strong>HTTP Method</strong>: <code>POST</code></li>
+<li><strong>HTTP Headers</strong>: <code>Content-Type: application/json</code></li>
+<li><strong>Body (JSON)</strong>: <code>{email: &lt;E-Mail&gt;, password: "&lt;Password&gt;", isEmployee: true}</code></li></ol></li>
+<li>The <strong>login API</strong> returns <code>HTTP 200</code> &amp; the following JSON structure: <code>{ token: ..., refresh: ..., ...}</code><ol>
+<li>Note: the access token value is in <code>token</code> attribute value, not in <code>refresh</code> attribute</li></ol></li>
+<li>The <strong>system</strong> stores the login API response token into <code>HTTP Only Cookie</code></li>
+<li>The <strong>system</strong> calls the <strong>user info API</strong> to retrieve the user name:<ol>
+<li><strong>URL</strong>: <code>https://api-yeshtery.dev.meetusvr.com/v1/user/info</code></li>
+<li><strong>HTTP Method</strong>: <code>GET</code></li>
+<li><strong>HTTP Headers</strong>:<ol>
+<li><strong>Content-Type</strong>: <code>application/json</code></li>
+<li><strong>Authorization</strong>: <code>Bearer &lt;Saved Token Value&gt;</code>, (<code>&lt;Saved Token Value&gt;</code> will be empty if it's the first time call &amp; <em>step 6</em> was not executed yet)</li></ol></li>
+<li><strong>Body (JSON)</strong>: <code>{email: &lt;E-Mail&gt;, password: "&lt;Password&gt;", isEmployee: true}</code></li></ol></li>
+<li>Depending on the success of the <strong>user info API</strong> call, the following alternate steps will be executed:<ol>
+<li><strong>on success</strong> (HTTP 200): the <strong>user info API</strong> returns the following JSON structure: <code>{ id: ..., name: ..., ...}</code> and <em>step 10</em> is executedd</li>
+<li><strong>on failure</strong> (not HTTP 200): <em>step 3</em> is executed</li></ol></li>
+<li>The <strong>system</strong> store the ID &amp; the name of the user</li>
+<li>The <strong>system</strong> displays the following dashboard page:<ol>
+<li><em>Data</em>:<ol>
+<li><code>ID</code>: from the stored user info API</li>
+<li><code>Name</code>: from the stored user info API</li></ol></li>
+<li><em>Actions</em>:<ol>
+<li><code>Logout</code> button</li></ol></li></ol></li>
+<li>The <strong>user</strong> clicks on the <code>Logout</code> button</li>
+<li>The <strong>system</strong> logs out the user &amp; goes to <em>step 1</em> of this scenario</li>
+</ol>
+<h6 id="exceptional-scenarios">Exceptional Scenarios</h6>
+<ul>
+<li><em>Step 4.a</em>: the user inputs invalid email or empty password when clicking <code>Login</code>:<ul>
+<li>Display validation errors</li>
+<li>Clear validation errors as soon as a change is done in the changed fields</li></ul></li>
+</ul>
+<h5 id="non-goals">Non Goals</h5>
+<p>The following are not needed for this test:</p>
+<ol>
+<li>JWT or Refresh Token knowledge..., you can assume that the back-end will respond HTTP code 401 if the token is invalid or expired</li>
+<li>Dashboard design..., we just need a simple page using a different layout than the login page so that we know we're in the dashboard section</li>
+</ol>
+<h5 id="evaluation-criteria">Evaluation Criteria</h5>
+<p><em>Source code must be pushed to a publicly available Github or Gitlab repository.</em></p>
+<p>The work result will be evaluated based on:</p>
+<ol>
+<li>Figma to HTML/CSS conversion</li>
+<li>NextJS code organization</li>
+<li>React &amp; Redux (or Zustand, we need at least one of the two to be used) usage</li>
+<li>Proper authentication token saving and expiration handling</li>
+<li>Git basic knowledge</li>
+<li>Adherence to requirements</li>
+</ol>
+<h5 id="additional-notes">Additional Notes</h5>
+<p>You can test that the API can login by running this curl command:</p>
+<pre><code class="sh language-sh">curl https://api-yeshtery.dev.meetusvr.com/v1/yeshtery/token -X POST -H "Content-Type: application/json" -d '{"email": "dev.aert@gmail.com", "password": "helloworld", "isEmployee": true}'</code></pre></div>
+</body>
+</html>

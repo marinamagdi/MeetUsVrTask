@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'ABeeZee', sans-serif;
+  
+}
+.login-container {
+  width: 1440px;
+  height: 1024px;
+   background: #E9ECF2;
+  opacity: 1;
+  transform: rotate(0deg);
+overflow: hidden;
+}
+
+.Ellipse2489 {
+position: absolute;
+  width: 667px;
+  height: 667px;
+  top: -247px;
+  left: 638px;
+  border-radius: 50%; 
+  opacity: 1;
+
+  background: radial-gradient(circle, rgba(228, 119, 246, 1) 0%, rgba(228, 119, 246, 0) 100%);
+
+  filter: blur(150px);
+
+}
+.Ellipse2488{
+    position: absolute;
+  width: 667px;
+  height: 667px;
+  top: 667px;
+  left: 1083px;
+  border-radius: 50%;
+  opacity: 1;
+
+  background: radial-gradient(circle, rgba(158, 119, 246, 1) 0%, rgba(158, 119, 246, 0) 100%);
+
+  filter: blur(150px);
+}
+.Ellipse2487{
+     position: absolute;
+  width: 813px;
+  height: 813px;
+  top: 646px;
+  left: -117px;
+  border-radius: 50%; 
+  opacity: 0.6;
+
+  
+  background: radial-gradient(circle, rgba(176, 210, 229, 1) 0%, rgba(176, 210, 229, 0) 100%);
+
+  
+  filter: blur(200px);
+}
+.Ellipse2486{
+    position: absolute;
+  width: 807px;
+  height: 807px;
+  top: -372px;
+  left: 38px;
+  border-radius: 50%; 
+  opacity: 0.6;
+
+  
+  background: radial-gradient(circle, rgba(158, 119, 246, 1) 0%, rgba(158, 119, 246, 0) 100%);
+
+ 
+  filter: blur(200px);
+}
+.FormContainer{
+  position: absolute;
+  width: 554px;
+  height: 1024px;
+  left: 40px;
+  top: 0; 
+  border-radius: 0; 
+  opacity: 1;
+  z-index: 100;
+}
+.login-box {
+ position: absolute;
+  width: 381px;
+  height: 437px;
+  top: 293.5px;
+  left: 86px;
+  opacity: 1;
+  flex-direction: column;
+  display: flex;
+}
+.titlebox{
+  width: 381px;
+  height: 130px;
+  opacity: 1;
+  transform: rotate(0deg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title{
+  width: 381px;
+  height: 66px;
+  color: #1A1A1E;
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 100%; 
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.subtitle-text {
+  width: 381px;
+  height: 56px;
+  color: #62626B;
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+  font-size: 18px;
+  line-height: 155%;
+  letter-spacing: 0;
+  text-align: center;
+ 
+}
+.inputs-frame {
+ width: 381px;
+
+  transform: rotate(0deg);
+flex-direction: column;
+  margin-top: 36px;
+  display: flex;
+  gap: 20px;    
+}
+.input-Email{
+  width: 381px;
+  opacity: 1;
+  transform: rotate(0deg);
+
+  border-radius: 8px;
+  border: 1px solid #FFFFFF;
+  background: #FFFFFF66; 
+
+  display: flex; 
+  gap: 12px;
+  padding: 16px;
+}
+.input-Email input, .input-Password input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 16px;
+  color: #1A1A1E; 
+}
+.input-icon {
+  width: 20px; 
+  height: 20px;
+  object-fit: contain;
+}
+.input-Password{
+ width: 381px;
+  opacity: 1;
+
+  border-radius: 8px;
+  border: 1px solid #FFFFFF;
+  background: #FFFFFF66;
+
+  display: flex;         
+
+  flex-direction: row;  
+  gap: 12px;              
+  padding: 16px;          
+  align-items: center;   
+  margin-top: 20px; 
+}
+
+.login-btn {
+  width: 381px;
+  height: 43px;
+  opacity: 1;
+  margin-top: 20px;
+
+  border-radius: 8px;
+  background: #9414FF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+.login-btn span {
+  width: 41px;
+  height: 19px;
+  opacity: 1;
+
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+
+  color: #FFFFFF; 
+}
+.signup-text {
+  width: 381px;
+  height: 22px;
+  opacity: 1;
+
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: 36px;
+
+  color: #62626B; 
+}
+
+.signup-text span {
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  text-align: center;
+
+  color: #62626B; 
+  cursor: pointer;
+}
+
+.Image-card {
+  width: 1440px;
+  height: 1024px;
+  border-radius: 20px;
+  border: 2.5px solid #FFFFFF;
+  background: rgba(255, 255, 255, 0.3); 
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px); 
+  opacity: 1;
+  position: relative; 
+}
+.Image-container{
+  position: relative;
+  width: 826px;
+  height: 1024px;
+  left: 614px;
+  
+}
+.images{
+  position: absolute;
+  width: 744px;
+  height: 523px;
+  top: 138px;
+  left: -6px;
+}
+.meetusvr{
+  width: 220%;  
+   height:auto;
+  position: absolute;
+   top: -104%;          
+  left: -63%;
+  transform: rotate(-20.86deg);
+  z-index: 2;
+}
+
+
+.meetusvr2{
+  position: absolute;
+  width: 696.32px;
+  height: 288.17px;
+  top: 25%;
+  left: 6px;
+  opacity: 1;
+  transform: rotate(-21.61deg);
+}
+.imagelogo{
+position: absolute;
+  width: 413px;
+  height: 75px;
+  top: 661px;
+  left: 170px;
+}
+.error-text{
+    color: red;
+    display: block;
+
+}
+
+
+.spinner {
+  border: 3px solid #fff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
