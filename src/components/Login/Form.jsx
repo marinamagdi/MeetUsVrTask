@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import "../../app/styles/login.css";
+import"../../styles/login.css";
 import { useDispatch } from "react-redux";
 import { setUser } from "@/redux/slice/authSlice";
 import { useRouter } from "next/navigation";
 import BackGroundGradient from "./BackGroundGradient";
-import Image from "next/image";
+
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -95,7 +95,7 @@ const Form = () => {
       <BackGroundGradient />
 
       {/* Left Card */}
-      <div className="FormContainer">
+     <div className="FormContainer">
         <div className="login-box">
 
           <div className="titlebox">
@@ -104,11 +104,12 @@ const Form = () => {
               an unforgettable shopping experience</p>
           </div>
 
-          <div className="inputs-frame">
+          <div  className={`inputs-frame ${emailError ? "with-error" : ""}`}>
             <form onSubmit={handleSubmit} >
 
               <div>
-                <div className="input-Email">
+                <div className={`input-Email ${emailError ? "with-error" : ""}`}>
+                  
                   <img src="/images/sms.png" alt="email" className="input-icon" />
                   <input
                     type="email"
@@ -121,7 +122,7 @@ const Form = () => {
               </div>
 
               <div>
-                <div className="input-Password">
+                <div className={`input-Password ${emailError ? "with-error" : ""}`}>
                   <img src="/images/lock.png" alt="email" className="input-icon" />
                   <input
                     type="password"
@@ -156,7 +157,7 @@ const Form = () => {
         </div>
       </div >
       {/* Second Card */}
-      <div div className="Image-card" >
+       <div div className="Image-card" >
         <div className="Image-container">
           <div className="images">
             <div className="meetusvr"> <img src="/images/MeetUsVr.png" alt="" /></div>
@@ -164,7 +165,7 @@ const Form = () => {
           </div>
           <img src="/images/MeetUsLogo.png" alt="" className="imagelogo" />
         </div>
-      </div >
+      </div >  
     </>
 
   );
