@@ -7,7 +7,7 @@
 
 body {
   font-family: 'ABeeZee', sans-serif;
-  
+  overflow: hidden;
 }
 .login-container {
   width: 1440px;
@@ -121,6 +121,7 @@ position: absolute;
   left: 86px;
   flex-direction: column;
   display: flex;
+  
 }
 @media (min-width: 1441px) {
 .FormContainer{
