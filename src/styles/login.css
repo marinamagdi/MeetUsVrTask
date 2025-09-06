@@ -78,7 +78,7 @@ position: absolute;
 @media (min-width: 1441px) {
   .login-container {
     width: 100vw;  
-    height: 100vh;  
+    
   }
 
   .Ellipse2489,
@@ -400,7 +400,7 @@ height: 57px;
 @media (min-width: 1441px) {
   .Image-card {
     width: 100vw;  
-    height: 100vh;  
+     
   }
 
 
@@ -410,7 +410,7 @@ height: 57px;
 @media (max-width: 1439px) {
   .Image-card {
     width: 100vw;
-    height: 100vh;
+    
   }
 
 
@@ -462,7 +462,7 @@ position: absolute;
 @media (min-width: 1441px) {
   .Image-card {
     width: 100vw;  
-    height: 100vh;  
+     
   }
 .Image-container{
   position: relative;
@@ -483,8 +483,7 @@ position: absolute;
 
 @media (max-width: 1439px) {
   .Image-card {
-    width: 100vw;
-    height: 100vh;
+    
     display: none;
   }
 
